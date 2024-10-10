@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>КАСКАДНІ ТАБЛИЦІ СТИЛІВ</title>
+   <style>
+      /* Селектори тегу */
+      p {
+         font-family: Arial, sans-serif;
+         font-size: 16px;
+         color: darkblue;
+         margin-bottom: 10px;
+      }
+
+      ul {
+         list-style-type: square;
+         margin: 10px 0;
+         padding-left: 20px;
+      }
+
+      /* Селектори класів */
+      .highlight {
+         background-color: yellow;
+         color: black;
+         padding: 10px;
+         border: 2px solid orange;
+      }
+
+      /* Селектори ідентифікаторів */
+      #unique {
+         font-weight: bold;
+         color: green;
+         border-bottom: 2px solid green;
+      }
+
+      /* Дочірній селектор застосовує стилі до дочірнього елемента */
+      .container p {
+         color: purple;
+         font-style: italic;
+      }
+
+      /* Суміжний селектор, який вибирає елемент, що безпосередньо слідує за попереднім елементом. */
+      p + .adjacent {
+         margin-top: 20px;
+         color: red;
+      }
+
+      [title] {
+         border: 1px dotted gray;
+         padding: 5px;
+         background-color: lightgray;
+      }
+
+      /* Стильове оформлення текстових елементів */
+      .styled {
+         font-family: 'Courier New', Courier, monospace; /* Шрифт */
+         font-size: 18px; /* Розмір шрифту */
+         font-style: italic; /* Стиль шрифту (курсив) */
+         font-weight: bold; /* Жирність шрифту */
+         line-height: 3; /* Висота рядка */
+         letter-spacing: 2px; /* Міжбуквенний інтервал */
+         word-spacing: 4px; /* Міжслівний інтервал */
+         text-align: center; /* Вирівнювання тексту */
+         text-decoration: underline overline wavy red; /* Декорація тексту (підкреслення та надкреслення) */
+         text-transform: uppercase; /* Трансформація тексту (всі літери великі) */
+         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Тінь тексту */
+         
+         color: navy; /* Колір тексту */
+         background-color: lightyellow; /* Фон тексту */
+         
+         padding: 15px; /* Внутрішні відступи */
+         border: 2px dashed teal; /* Рамка */
+         border-radius: 10px; /* Скруглення кутів */
+         
+         white-space: pre-wrap; /* Збереження пробілів і переведення рядків */
+         overflow-wrap: break-word; /* Перенесення довгих слів на новий рядок */
+         direction: rtl; /* Напрямок тексту справа наліво */
+         writing-mode: vertical-rl; /* Вертикальне розташування тексту справа наліво */
+     }
+     
+   </style>
+</head>
+<body>
+    <h1>Практика роботи з CSS селекторами та стилями</h1>
+
+    <!-- Селектори тегу -->
+    <section id="selectors-tags">
+        <h2>Селектори тегу</h2>
+        <p>Цей абзац стилізовано за допомогою селектора тегу.</p>
+        <ul>
+            <li>Елемент списку 1</li>
+            <li>Елемент списку 2</li>
+            <li>Елемент списку 3</li>
+        </ul>
+    </section>
+
+    <!-- Селектори класів -->
+    <section id="selectors-classes">
+        <h2>Селектори класів</h2>
+        <div class="highlight">Цей блок тексту стилізовано за допомогою класу .highlight.</div>
+    </section>
+
+    <!-- Селектори ідентифікаторів -->
+    <section id="selectors-ids">
+        <h2>Селектори ідентифікаторів</h2>
+        <p id="unique">Цей абзац стилізовано за допомогою ідентифікатора #unique.</p>
+    </section>
+
+    <!-- Інші селектори -->
+    <section id="other-selectors">
+        <h2>Інші селектори</h2>
+        <div class="container">
+            <p>Цей блок використовує дочірній селектор для елементів у <code>.container p</code>.</p>
+        </div>
+        <p>Звичайний абзац.</p>
+        <p class="adjacent">Для цього абзацу застосовується селектор суміжних елементів <code>p + .adjacent</code>.</p>
+        <p class="attribute" title="CSS селектор атрибута">Абзац із селектором атрибута [title].</p>
+    </section>
+
+    <!-- Стилізований текст -->
+    <section id="styled-text">
+        <h2>Стильове оформлення текстових елементів</h2>
+        <p class="styled">Цей абзац використовує стилі для шрифтів, контурів, фону та кольору тексту.</p>
+    </section>
+</body>
+</html>
